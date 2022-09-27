@@ -1,0 +1,11 @@
+name: tutorial
+
+# conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      csv_file: {type: string, default: dataset.csv}
+      max_depth: {type: int, default: 6}
+      max_features: {type: int, default: 3}
+    command: "python train.py {csv_file} {max_depth} {max_features}"
