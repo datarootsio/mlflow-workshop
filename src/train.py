@@ -10,6 +10,9 @@ from sklearn.model_selection import cross_val_predict
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+# to run the project
+# mlflow run ./src --no-conda -P csv_file=../data/heart.csv -P  max_depth=5
+
 if __name__ == "__main__":
     # parameters
     csv_file = str(sys.argv[1])
