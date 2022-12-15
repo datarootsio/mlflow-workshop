@@ -19,7 +19,7 @@ repos:
     hooks:
       - id: black
         args: ["--line-length", "88"]
-        files: src-mlflow-project-mlflow-project/
+        files: src-mlflow-project/
 
   - repo: https://github.com/pycqa/flake8
     rev: 3.9.2
