@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 # to run the project
-# mlflow run ./src-mlflow-project --env-manager=local -P csv_file=../data/heart.csv -P  max_depth=5 --experiment-id= ...
+# mlflow run ./src-mlflow-project --env-manager=local -P csv_file=../data/heart.csv -P  max_depth=5 --experiment-id= ..
 
 
 def parse_parameters():

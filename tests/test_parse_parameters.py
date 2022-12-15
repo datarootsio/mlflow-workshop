@@ -1,6 +1,6 @@
-from src_mlflow_project.train import parse_parameters
 import sys
 import pytest
+from src_mlflow_project.train import parse_parameters
 
 
 def test_parse_arguments():
