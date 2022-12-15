@@ -13,6 +13,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 # to run the project
 # mlflow run ./src-mlflow-project --env-manager=local -P csv_file=../data/heart.csv -P  max_depth=5 --experiment-id= ...
 
+
 def parse_parameters():
     csv_file = str(sys.argv[1])
     max_depth = int(sys.argv[2])
