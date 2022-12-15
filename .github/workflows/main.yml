@@ -1,0 +1,25 @@
+name: 'tests'
+on: [push, pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:  # drop this if you only want to test for a specific version
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }} # or your python specific version
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }} # or your python specific version
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: QA with black and isort
+        run: |
+          black . --check
+          isort . --check-only
+      - name: Tests
+        run: |
+          pytest -vv
