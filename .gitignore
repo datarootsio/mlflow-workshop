@@ -91,6 +91,8 @@ target/
 
 # MLflow local runs
 mlruns/
+*.sqlite
+mlartifacts/
 
 # nginx auth file
 .htpasswd
