@@ -1,0 +1,14 @@
+[flake8]
+exclude =
+    .git,
+    *.egg-info,
+    __pycache__,
+    .tox,
+    .pytest_cache,
+    .mypy_cache,
+    build,
+    dist,
+    tests,
+    *venv
+max-line-length = 120
+ignore = D202,W503,E203,S101,S108 # conflicts with black
