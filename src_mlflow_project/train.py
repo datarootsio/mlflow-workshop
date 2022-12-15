@@ -11,13 +11,19 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 # to run the project
-# mlflow run ./src-mlflow-project --env-manager=local -P csv_file=../data/heart.csv -P  max_depth=5 --experiment-id= ...
+# mlflow run ./src-mlflow-project --env-manager=local -P csv_file=../data/heart.csv -P  max_depth=5 --experiment-id= ..
 
-if __name__ == "__main__":
-    # parameters
+
+def parse_parameters():
     csv_file = str(sys.argv[1])
     max_depth = int(sys.argv[2])
     max_features = int(sys.argv[3])
+    return csv_file, max_depth, max_features
+
+
+if __name__ == "__main__":
+    # parameters
+    csv_file, max_depth, max_features = parse_parameters()
 
     data = pd.read_csv(csv_file)
 
